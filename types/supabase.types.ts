@@ -234,7 +234,7 @@ export interface definitions {
      */
     created_at?: string;
     /** Format: ARRAY */
-    images?: unknown[];
+    images?: string[];
   };
   location_type: {
     /**
