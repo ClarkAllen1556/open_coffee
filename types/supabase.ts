@@ -21,6 +21,7 @@ export interface paths {
           type?: parameters["rowFilter.location.type"];
           created_by?: parameters["rowFilter.location.created_by"];
           created_at?: parameters["rowFilter.location.created_at"];
+          images?: parameters["rowFilter.location.images"];
           /** Filtering Columns */
           select?: parameters["select"];
           /** Ordering */
@@ -76,6 +77,7 @@ export interface paths {
           type?: parameters["rowFilter.location.type"];
           created_by?: parameters["rowFilter.location.created_by"];
           created_at?: parameters["rowFilter.location.created_at"];
+          images?: parameters["rowFilter.location.images"];
         };
         header: {
           /** Preference */
@@ -95,6 +97,7 @@ export interface paths {
           type?: parameters["rowFilter.location.type"];
           created_by?: parameters["rowFilter.location.created_by"];
           created_at?: parameters["rowFilter.location.created_at"];
+          images?: parameters["rowFilter.location.images"];
         };
         body: {
           /** location */
@@ -230,6 +233,8 @@ export interface definitions {
      * @default now()
      */
     created_at?: string;
+    /** Format: ARRAY */
+    images?: unknown[];
   };
   location_type: {
     /**
@@ -293,6 +298,8 @@ export interface parameters {
   "rowFilter.location.created_by": string;
   /** Format: timestamp with time zone */
   "rowFilter.location.created_at": string;
+  /** Format: ARRAY */
+  "rowFilter.location.images": string;
   /** @description location_type */
   "body.location_type": definitions["location_type"];
   /** Format: bigint */

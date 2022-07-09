@@ -1,6 +1,6 @@
-import { ReactElement, ReactNode, useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { supabase } from "../utils/supabase.client";
-import { definitions } from "../types/subabase";
+import { definitions } from "../types/supabase";
 
 type Location = definitions["location"] & {
   type: definitions["location_type"];
