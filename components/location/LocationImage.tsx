@@ -48,7 +48,7 @@ export default function LocationImage({ url, onUpload }: Props) {
   }
 
   return (
-    <div>
+    <>
       {imageUrl ? (
         <img src={imageUrl} alt="location image" className="w-48 h-48 rounded-xl border-2 border-sol-yellow-1" />
       ) : (
@@ -65,6 +65,6 @@ export default function LocationImage({ url, onUpload }: Props) {
           onChange={(e) => uploadImage(e)}
         />
       </div>
-    </div>
-  );
+    </>
+);
 }

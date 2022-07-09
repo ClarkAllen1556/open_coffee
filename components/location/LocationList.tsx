@@ -47,10 +47,10 @@ export default function LocationList() {
   }
 
   return (
-    <div>
+    <>
       {locations.map((loc: Location) => (
         <Location location={loc} key={loc.id} />
       ))}
-    </div>
+    </>
   );
 }
