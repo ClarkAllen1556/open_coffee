@@ -11,13 +11,12 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        <main className="w-full p-8 max-w-5xl ml-auto mr-auto">
+      <main className="w-full p-8 max-w-5xl ml-auto mr-auto">
         <h1 className="whitespace-nowrap">Open Coffee</h1>
-          <LocationList />
+        <LocationList />
       </main>
 
-      <footer>
-      </footer>
+      <footer></footer>
     </div>
   );
 };

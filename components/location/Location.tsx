@@ -37,32 +37,33 @@ export default function Location({ location }: { location: Location }) {
       {{
         cardTitle: (
           <>
-          <h2>{location.name}</h2>
-          <TypeTag type={location.type} />
+            <h2>{location.name}</h2>
+            <TypeTag type={location.type} />
           </>
         ),
         content: (
           <div className="flex flex-col md:flex-row items-center md:items-start">
             <div className="shrink-0">
-            {location.images?.map((img) => (
-              <LocationImage
-                key={`${location.id}-img`}
-                url={img}
-                onUpload={(url) =>
-                  updateLocation(location, {
-                    ...location,
-                    images: location.images ? [...location.images, url] : [url],
-                  })
-                }
-              />
-            ))}</div>
+              {location.images?.map((img) => (
+                <LocationImage
+                  key={`${location.id}-img`}
+                  url={img}
+                  onUpload={(url) =>
+                    updateLocation(location, {
+                      ...location,
+                      images: location.images ? [...location.images, url] : [url],
+                    })
+                  }
+                />
+              ))}
+            </div>
 
             <div className="ml-5 mr-5 md:ml-10 md:mr-10">
               <p>{location.details}</p>
             </div>
           </div>
         ),
-        footer:
+        footer: (
           <ul className="flex gap-2">
             {location.links.map((link) => (
               <li key={`${location.id}-${link.id}`}>
@@ -70,6 +71,7 @@ export default function Location({ location }: { location: Location }) {
               </li>
             ))}
           </ul>
+        ),
       }}
     </Card>
   );

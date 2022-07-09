@@ -66,5 +66,5 @@ export default function LocationImage({ url, onUpload }: Props) {
         />
       </div>
     </>
-);
+  );
 }
