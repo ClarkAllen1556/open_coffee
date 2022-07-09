@@ -36,3 +36,6 @@ yarn-error.log*
 
 # update script
 update_types.sh
+
+# idea
+.idea
