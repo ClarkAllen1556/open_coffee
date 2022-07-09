@@ -7,8 +7,8 @@ import Location from './Location';
 type Location = definitions['location'] & {
   type: definitions['location_type'];
   links: (definitions['location_link'] & {
-    type: definitions['link_type']
-  })[]
+    type: definitions['link_type'];
+  })[];
 };
 
 export default function LocationList() {
@@ -25,7 +25,7 @@ export default function LocationList() {
 
       let { data, error, status } = await supabase
         .from<Location>('location')
-        .select('*, type:location_type(id, name), links:location_link(id, url, type:link_type(name))') // todo need to have all the fields if I want to do update
+        .select('*, type:location_type(id, name), links:location_link(id, url, type:link_type(name))'); // todo need to have all the fields if I want to do update
 
       if (error && status !== 406) throw error;
 

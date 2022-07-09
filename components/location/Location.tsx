@@ -2,13 +2,13 @@ import { supabase } from '../../utils/supabase.client';
 import { definitions } from '../../types/supabase.types';
 
 import LocationImage from './LocationImage';
-import TypeTag from '../type/TypeTag'
+import TypeTag from '../type/TypeTag';
 
 type Location = definitions['location'] & {
   type: definitions['location_type'];
   links: (definitions['location_link'] & {
-    type: definitions['link_type']
-  })[]
+    type: definitions['link_type'];
+  })[];
 };
 
 export default function Location({ location }: { location: Location }) {
@@ -40,33 +40,31 @@ export default function Location({ location }: { location: Location }) {
 
       <div className="flex">
         <div className="shrink-0">
-        {location.images?.map((img) => (
-          <LocationImage
-            key={`${location.id}-img`}
-            url={img}
-            onUpload={(url) =>
-              updateLocation(location, {
-                ...location,
-                images: location.images ? [...location.images, url] : [url],
-              })
-            }
-          />
-        ))}</div>
+          {location.images?.map((img) => (
+            <LocationImage
+              key={`${location.id}-img`}
+              url={img}
+              onUpload={(url) =>
+                updateLocation(location, {
+                  ...location,
+                  images: location.images ? [...location.images, url] : [url],
+                })
+              }
+            />
+          ))}
+        </div>
 
         <div className="ml-10 mr-10">
-          <p>
-            {location.details}
-          </p>
+          <p>{location.details}</p>
         </div>
       </div>
 
       <ul className="flex gap-2">
-        {location.links.map(link => (
-            <li key={`${location.id}-${link.id}`}>
-              <a href={link.url}>{link.type.name.toLocaleUpperCase('en-US')}</a>
-            </li>
-          ))
-        }
+        {location.links.map((link) => (
+          <li key={`${location.id}-${link.id}`}>
+            <a href={link.url}>{link.type.name.toLocaleUpperCase('en-US')}</a>
+          </li>
+        ))}
       </ul>
     </div>
   );

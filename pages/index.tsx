@@ -1,18 +1,15 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import LocationList from "../components/location/LocationList";
-import styles from "../styles/Home.module.css";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import LocationList from '../components/location/LocationList';
+import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
         <title>Open Coffee</title>
-        <meta
-          name="description"
-          content="Open platform to discover new cafes!"
-        />
+        <meta name="description" content="Open platform to discover new cafes!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -29,7 +26,7 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
+          Powered by{' '}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
