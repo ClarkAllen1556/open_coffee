@@ -11,6 +11,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
 
+  @apply p-0.5
+  md:p-2;
+
   @apply bg-sol-tan-1
   text-sol-black-2
   dark:bg-sol-black-2

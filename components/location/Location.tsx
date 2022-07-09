@@ -37,12 +37,12 @@ export default function Location({ location }: { location: Location }) {
       {{
         cardTitle: (
           <>
-            <h2>{location.name}</h2>
             <TypeTag type={location.type} />
+            <h2 className="mb-2 text-center md:text-left">{location.name}</h2>
           </>
         ),
         content: (
-          <div className="flex flex-col md:flex-row items-center md:items-start">
+          <div className="flex flex-col md:flex-row gap-2 items-center md:items-start">
             <div className="shrink-0">
               {location.images?.map((img) => (
                 <LocationImage
@@ -58,7 +58,7 @@ export default function Location({ location }: { location: Location }) {
               ))}
             </div>
 
-            <div className="ml-5 mr-5 md:ml-10 md:mr-10">
+            <div className="ml-2 mr-2 md:ml-5 md:mr-5">
               <p>{location.details}</p>
             </div>
           </div>
