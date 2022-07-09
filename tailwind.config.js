@@ -17,7 +17,7 @@ module.exports = {
       "sol-grey-1": "#93a1a1",
       "sol-black-1": "#073642",
       "sol-black-2": "#002b36",
-      "white-1": "#ffffff",
+      "sol-white-1": "#ffffff",
       "sol-red-1": "#c9211e",
       "sol-magenta-1": "#d33682",
     },
