@@ -11,7 +11,7 @@ type Location = definitions['location'] & {
   })[]
 };
 
-export default function LocationElement({ location }: { location: Location }) {
+export default function Location({ location }: { location: Location }) {
   async function updateLocation(loc: Location, changes: Location) {
     try {
       let { error } = await supabase.from('location').upsert(
