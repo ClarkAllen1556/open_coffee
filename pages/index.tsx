@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import LocationList from "../components/LocationList";
+import LocationList from "../components/location/LocationList";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Open Coffee</h1>
-        <div>
+        <div className="w-full p-8 max-w-5xl ml-auto mr-auto">
           <LocationList />
         </div>
       </main>
