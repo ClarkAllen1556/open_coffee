@@ -3,6 +3,7 @@ import { supabase } from '../../utils/supabase.client';
 import { definitions } from '../../types/supabase.types';
 
 import Location from './Location';
+import Loader from '../Loader';
 
 type Location = definitions['location'] & {
   type: definitions['location_type'];
@@ -40,8 +41,8 @@ export default function LocationList() {
 
   if (loading) {
     return (
-      <div>
-        <strong>Loading...</strong>
+      <div className="flex justify-center">
+        <Loader />
       </div>
     );
   }

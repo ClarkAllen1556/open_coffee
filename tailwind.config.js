@@ -18,7 +18,11 @@ module.exports = {
       'sol-red-1': '#c9211e',
       'sol-magenta-1': '#d33682',
     },
-    extend: {},
+    extend: {
+      animation: {
+        'pulse-fast': 'pulse 0.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+    },
   },
   plugins: [
     function ({ addBase }) {
