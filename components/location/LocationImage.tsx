@@ -1,5 +1,6 @@
 import { ChangeEvent, useEffect, useState } from 'react';
 import { supabase } from '../../utils/supabase.client';
+import Image from 'next/future/image';
 
 interface Props {
   url?: string;
@@ -50,7 +51,13 @@ export default function LocationImage({ url, onUpload }: Props) {
   return (
     <>
       {imageUrl ? (
-        <img src={imageUrl} alt="location image" className="w-48 h-48 rounded-xl border-2 border-sol-yellow-1" />
+        <Image
+          src={imageUrl}
+          alt="location image"
+          height={'192'}
+          width={'192'}
+          className="rounded-xl border-2 border-sol-yellow-1 fill-current"
+        />
       ) : (
         <div>No image</div>
       )}
