@@ -4,6 +4,7 @@ import { definitions } from '../../types/supabase.types';
 import LocationImage from './LocationImage';
 import TypeTag from '../type/TypeTag';
 import Card from '../Card';
+import Link from 'next/link';
 
 type Location = definitions['location'] & {
   type: definitions['location_type'];
@@ -70,6 +71,9 @@ export default function Location({ location }: { location: Location }) {
                 <a href={link.url}>{link.type.name.toLocaleUpperCase('en-US')}</a>
               </li>
             ))}
+            <li className="ml-auto">
+              <Link href={`/shop/${location.id}`}>More detail...</Link>
+            </li>
           </ul>
         ),
       }}
